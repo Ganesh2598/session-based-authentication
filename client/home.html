@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        h1{
+            margin-top: 3%;
+        }
+
+        .container{
+            border : 2px solid black;
+            margin-left: 25%;
+            margin-right: 25%;
+            height:80%;
+        }
+
+        .container input{
+            border:none;
+            margin-top: 5%;
+            height : 40px;
+            width: 100vh;
+            width: 80%;
+            font-size: x-large;
+            border-bottom: 2px solid blue;
+            color : red;
+        }
+
+        .container input:hover{
+            background-color: lightblue;
+            border-radius: 10px;
+        }
+
+        .list{
+            height:75%;
+            overflow: auto;
+        }
+
+        .list p{
+            font-weight: bold;
+            font-size: x-large;
+            color: black;
+            border : 2px solid black;
+            width:80%;
+            height:30px;
+            margin-left: 10%;
+            border-radius: 5px;
+        }
+
+        .container button{
+            font-size: large;
+            border : none;
+            height : 40px;
+            color: blue;
+            font-weight: bolder;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .logout button{
+            font-size: x-large;
+            border : 1px solid red;
+            border-radius: 10px;
+            color: black;
+            background-color: #fff;
+        }
+    </style>
+    <body>
+        <h1>WELCOME TO TODO</h1>
+        <div class="container">
+            <input type="text" value="" placeholder="Enter your task" id="task"/><button onclick="add()">ADD</button>
+            <div class="list">
+
+            </div>
+            <div class="logout">
+                <form method="GET" action = "/logout">
+                    <button>Logout</button>
+                </form>
+            </div>
+            
+        </div>
+    </body>
+    <script>
+        var tasks = [];
+        function add(e){
+            var task = document.getElementById("task").value;
+            var p = document.createElement("p");
+            p.textContent = task;
+            var div = document.getElementsByClassName("list")[0];
+            div.appendChild(p)
+        }
+    </script>
+</html>

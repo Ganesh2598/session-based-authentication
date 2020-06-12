@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <style>
+        body{
+            text-align: center;
+        }
+        div{
+            border : 2px solid black;
+            margin-top: 10%;
+            margin-left: 25%;
+            margin-right: 25%;
+            height : 50%;
+            padding: 10px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        input{
+            width : 80%;
+            height : 30px;
+        }
+
+        input[type=submit]{
+            border:none;
+            border-radius: 10px;
+            font-size: 100%;
+            height : 40px;
+        }
+
+        input:hover{
+            box-shadow: 0 0 6px rgba(35, 173, 255, 1);
+            cursor: pointer;
+        }
+
+    </style>
+    <body>
+        <div>
+            <h1>REGISTER</h1>
+            <form method="POST" action="/register"> 
+                <p><input type="text" value="" name="name" placeholder="name"/></p>
+                <p><input type="email" value="" name="email" placeholder="email"/></p>
+                <p><input type="password" value="" name="password" placeholder="password"/></p>
+                <p><input type="submit" value="register"/></p>
+                <p><a href="/login">Already have a account?</a></p>
+            </form>
+        </div>
+    </body>
+</html>
